@@ -260,8 +260,10 @@ except CloudLayerError as e:
 
 ## Other SDKs
 
-- **.NET C#:** [cloudlayerio-dotnet](https://www.nuget.org/packages/cloudlayerio-dotnet/) ([GitHub](https://github.com/cloudlayerio/cloudlayerio-dotnet))
 - **JavaScript/TypeScript:** [@cloudlayerio/sdk](https://www.npmjs.com/package/@cloudlayerio/sdk) ([GitHub](https://github.com/cloudlayerio/cloudlayerio-js))
+- **Go:** [cloudlayerio-go](https://pkg.go.dev/github.com/cloudlayerio/cloudlayerio-go) ([GitHub](https://github.com/cloudlayerio/cloudlayerio-go))
+- **PHP:** [cloudlayerio/sdk](https://packagist.org/packages/cloudlayerio/sdk) ([GitHub](https://github.com/cloudlayerio/cloudlayerio-php))
+- **.NET C#:** [cloudlayerio-dotnet](https://www.nuget.org/packages/cloudlayerio-dotnet/) ([GitHub](https://github.com/cloudlayerio/cloudlayerio-dotnet))
 
 ## License
 
