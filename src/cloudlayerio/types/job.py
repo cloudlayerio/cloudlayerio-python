@@ -71,9 +71,9 @@ class Job:
     """A document generation job returned by the CloudLayer API."""
 
     id: str
-    uid: str
     status: str  # JobStatus at runtime
-    timestamp: int
+    uid: str = ""
+    timestamp: int = 0
     name: str | None = None
     type: str | None = None  # JobType at runtime
     worker_name: str | None = None

@@ -41,19 +41,19 @@ _ACCOUNT_FIELD_MAP: dict[str, str] = {
 class AccountInfo:
     """Account information from the CloudLayer API."""
 
-    email: str
-    calls_limit: int
-    calls: int
-    storage_used: int
-    storage_limit: int
-    subscription: str
-    bytes_total: int
-    bytes_limit: int
-    compute_time_total: int
-    compute_time_limit: int
-    sub_type: str  # "usage" | "limit" at runtime
-    uid: str
-    sub_active: bool
+    email: str = ""
+    uid: str = ""
+    calls: int = 0
+    calls_limit: int = 0
+    storage_used: int = 0
+    storage_limit: int = 0
+    subscription: str = ""
+    bytes_total: int = 0
+    bytes_limit: int = 0
+    compute_time_total: int = 0
+    compute_time_limit: int = 0
+    sub_type: str = ""  # "usage" | "limit" at runtime
+    sub_active: bool = False
     credit: int | None = None
     extra_fields: dict[str, Any] = field(default_factory=dict)
 
