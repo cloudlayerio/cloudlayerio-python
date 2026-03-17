@@ -1,0 +1,103 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cloudlayerio"
+description = "Official Python SDK for the CloudLayer.io document generation API"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+authors = [{ name = "CloudLayer.io", email = "support@cloudlayer.io" }]
+keywords = ["pdf", "image", "html", "document", "generation", "conversion", "api", "sdk", "cloudlayer"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP",
+    "Typing :: Typed",
+]
+dependencies = ["httpx>=0.27,<1"]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "pytest-cov>=4",
+    "pytest-asyncio>=0.23",
+    "respx>=0.21",
+    "mypy>=1.8",
+    "ruff>=0.4",
+    "build>=1",
+]
+
+[project.urls]
+Homepage = "https://cloudlayer.io"
+Documentation = "https://cloudlayer.io/docs/sdk-python"
+Repository = "https://github.com/cloudlayerio/cloudlayerio-python"
+Issues = "https://github.com/cloudlayerio/cloudlayerio-python/issues"
+Changelog = "https://github.com/cloudlayerio/cloudlayerio-python/blob/main/CHANGELOG.md"
+
+[tool.hatch.version]
+path = "src/cloudlayerio/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = ["src/cloudlayerio"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cloudlayerio"]
+
+# --- Ruff ---
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "TCH", "RUF", "FA"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["SIM117"]  # Nested with statements are clearer in tests (client + pytest.raises)
+
+[tool.ruff.lint.isort]
+known-first-party = ["cloudlayerio"]
+
+# --- mypy ---
+
+[tool.mypy]
+strict = true
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+
+# --- pytest ---
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "smoke: live API tests requiring CLOUDLAYER_API_KEY env var",
+]
+addopts = "--strict-markers"
+asyncio_mode = "auto"
+
+# --- coverage ---
+
+[tool.coverage.run]
+source = ["cloudlayerio"]
+branch = true
+
+[tool.coverage.report]
+fail_under = 90
+show_missing = true
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "if __name__ == .__main__.",
+]
