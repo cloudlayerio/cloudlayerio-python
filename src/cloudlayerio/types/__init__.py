@@ -1,4 +1,4 @@
-"""Public type definitions for the CloudLayer.io Python SDK."""
+"""Public type definitions for the cloudlayer.io Python SDK."""
 
 from __future__ import annotations
 

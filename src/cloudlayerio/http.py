@@ -1,4 +1,4 @@
-"""HTTP transport layer for the CloudLayer.io Python SDK.
+"""HTTP transport layer for the cloudlayer.io Python SDK.
 
 Handles authentication, retries, timeouts, error mapping, and response parsing.
 """

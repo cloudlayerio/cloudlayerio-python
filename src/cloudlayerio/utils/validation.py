@@ -1,4 +1,4 @@
-"""Client-side input validation for the CloudLayer.io Python SDK."""
+"""Client-side input validation for the cloudlayer.io Python SDK."""
 
 from __future__ import annotations
 

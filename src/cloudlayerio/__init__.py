@@ -1,4 +1,4 @@
-"""Official Python SDK for the CloudLayer.io document generation API."""
+"""Official Python SDK for the cloudlayer.io document generation API."""
 
 from __future__ import annotations
 

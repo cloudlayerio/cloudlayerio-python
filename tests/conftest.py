@@ -1,4 +1,4 @@
-"""Shared test fixtures for the CloudLayer.io Python SDK."""
+"""Shared test fixtures for the cloudlayer.io Python SDK."""
 
 from __future__ import annotations
 

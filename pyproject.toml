@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "cloudlayerio"
-description = "Official Python SDK for the CloudLayer.io document generation API"
+description = "Official Python SDK for the cloudlayer.io document generation API"
 readme = "README.md"
 requires-python = ">=3.9"
 license = "Apache-2.0"

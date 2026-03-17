@@ -1,4 +1,4 @@
-"""Exception hierarchy for the CloudLayer.io Python SDK.
+"""Exception hierarchy for the cloudlayer.io Python SDK.
 
 Mirrors the JS SDK's 8 error classes with request context for debugging.
 """

@@ -1,11 +1,11 @@
-# CloudLayer.io Python SDK
+# cloudlayer.io Python SDK
 
 [![PyPI version](https://img.shields.io/pypi/v/cloudlayerio.svg)](https://pypi.org/project/cloudlayerio/)
 [![Python versions](https://img.shields.io/pypi/pyversions/cloudlayerio.svg)](https://pypi.org/project/cloudlayerio/)
 [![License](https://img.shields.io/pypi/l/cloudlayerio.svg)](https://github.com/cloudlayerio/cloudlayerio-python/blob/main/LICENSE)
 [![CI](https://github.com/cloudlayerio/cloudlayerio-python/actions/workflows/ci.yml/badge.svg)](https://github.com/cloudlayerio/cloudlayerio-python/actions/workflows/ci.yml)
 
-Official Python SDK for the [CloudLayer.io](https://cloudlayer.io) document generation API. Convert URLs, HTML, and templates to PDF and images.
+Official Python SDK for the [cloudlayer.io](https://cloudlayer.io) document generation API. Convert URLs, HTML, and templates to PDF and images.
 
 ## Installation
 
@@ -260,6 +260,7 @@ except CloudLayerError as e:
 
 ## Other SDKs
 
+- **.NET C#:** [cloudlayerio-dotnet](https://www.nuget.org/packages/cloudlayerio-dotnet/) ([GitHub](https://github.com/cloudlayerio/cloudlayerio-dotnet))
 - **JavaScript/TypeScript:** [@cloudlayerio/sdk](https://www.npmjs.com/package/@cloudlayerio/sdk) ([GitHub](https://github.com/cloudlayerio/cloudlayerio-js))
 
 ## License
